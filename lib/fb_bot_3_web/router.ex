@@ -7,5 +7,8 @@ defmodule FbBot3Web.Router do
 
   scope "/api", FbBot3Web do
     pipe_through :api
+
+    get "/webhook", WebhookController, :challenge
+    post "/webhook", WebhookController, :message_events
   end
 end
