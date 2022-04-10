@@ -17,6 +17,10 @@ config :fb_bot_3, FbBot3Web.Endpoint,
   pubsub_server: FbBot3.PubSub,
   live_view: [signing_salt: "X0SGlFlL"]
 
+config :fb_bot_3,
+  page_access_token: System.get_env("PAGE_ACCESS_TOKEN"),
+  verification_key: System.get_env("VERIFICATION_KEY")
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

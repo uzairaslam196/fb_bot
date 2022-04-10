@@ -10,5 +10,8 @@ config :fb_bot_3, FbBot3Web.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+config :fb_bot_3,
+  recipient_id: System.get_env("RECIPIENT_ID")
+
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
