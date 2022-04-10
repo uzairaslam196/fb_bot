@@ -21,6 +21,9 @@ Codebase metatdata
 
 Note: (if you are facing issue with webhook events then please once put the webhook url in browser new tab to call server from there, it might be in sleep mode at heroku)
 
+Server URL: https://obscure-plains-02948.herokuapp.com/
+Webhook URL: https://obscure-plains-02948.herokuapp.com/api/webhook
+
 ## Learn more
 
   * Official website: https://www.phoenixframework.org/
