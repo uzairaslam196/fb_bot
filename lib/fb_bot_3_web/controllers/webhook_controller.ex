@@ -5,11 +5,14 @@ defmodule FbBot3Web.WebhookController do
   @verification_key Application.get_env(:fb_bot_3, :verification_key)
 
   def challenge(conn, params) do
+    IO.inspect(conn)
+    IO.inspect("params")
+    IO.inspect(params)
     if params["hub.verify"] == @verification_key do
       challenge = params["hub.challenge"] && String.to_integer(params["hub.challenge"])
       json(conn, challenge)
     else
-      conn
+      json(conn, nil)
     end
   end
 
