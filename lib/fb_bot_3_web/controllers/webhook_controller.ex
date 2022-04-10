@@ -23,11 +23,13 @@ defmodule FbBot3Web.WebhookController do
     case do_message_events(message) do
       {:ok, _} ->
         Logger.info("Successfully sent the message's response")
+        json(conn, "Successfully sent")
       {:error, message} ->
         Logger.error(message)
+        json(conn, message)
     end
 
-    conn
+
   end
 
   defp do_message_events(%{"message" => _message, "recipient" => %{"id" => id}}) do
