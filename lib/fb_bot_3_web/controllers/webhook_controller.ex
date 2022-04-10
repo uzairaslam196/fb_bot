@@ -30,11 +30,11 @@ defmodule FbBot3Web.WebhookController do
     end
   end
 
-  defp do_message_events(%{"message" => _message, "recipient" => %{"id" => id}}) do
+  defp do_message_events(%{"message" => _message, "sender" => %{"id" => id}}) do
     FbBot3.Messages.process(id)
   end
 
-  defp do_message_events(%{"postback" => postback, "recipient" => %{"id" => id}}) do
+  defp do_message_events(%{"postback" => postback, "sender" => %{"id" => id}}) do
     FbBot3.Messages.process(postback, id)
   end
 
