@@ -19,6 +19,7 @@ Codebase metatdata
 * webhook controller (lib/fb_bot_3_web/controllers/webhook_controller.ex)
 * HTTP Client, fb_bot & coin_ginko APIs in following directory (lib/fb_bot_3)
 
+Note: (if you are facing issue with webhook events then please once put the webhook url in browser new tab to call server from there, it might be in sleep mode at heroku)
 ## Learn more
 
   * Official website: https://www.phoenixframework.org/
