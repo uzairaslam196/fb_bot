@@ -17,7 +17,6 @@ defmodule FbBot3Web.WebhookController do
   end
 
   def message_events(conn, params) do
-    FbBot3.Messages.process(params)
     [%{"messaging" => [message | _]} | _] = params["entry"]
 
     case do_message_events(message) do
