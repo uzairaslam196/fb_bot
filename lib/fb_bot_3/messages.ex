@@ -50,6 +50,7 @@ defmodule FbBot3.Messages do
   def build_request(params, recipient_id, :fetch_user_info, tries) do
     Client.build()
     |> Tesla.get("/#{recipient_id}?fields=first_name,last_name&access_token=#{@page_access_token}")
+    |> IO.inspect()
     |> case do
       {:ok, %Tesla.Env{status: 200, body: body}} -> {:ok, body}
       {:ok, %Tesla.Env{}} -> build_request(params, recipient_id, :fetch_user_info, tries + 1)
