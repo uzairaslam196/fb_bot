@@ -11,6 +11,7 @@ defmodule FbBot3.Messages do
   Accept recipient_id and process intial responses accordingly for a user
   """
   def process(recipient_id) do
+    IO.inspect(System.get_env("PAGE_ACCESS_TOKEN"))
     IO.inspect("page access token")
     IO.inspect(@page_access_token)
     IO.inspect(recipient_id)
