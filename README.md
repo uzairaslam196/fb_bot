@@ -10,7 +10,7 @@ To start your Phoenix server:
 * Or if you don't have env vars yet and want to use your own fb application then please go and create the fb 
   app following this link (https://developers.facebook.com/docs/development/create-an-app/)
 
-* Once the application is created & setup permissions then get page_access_token, recipient_id(who have perission to use google apis)
+* Once the application is created & setup permissions then get page_access_token, recipient_id(who have perission to send message on your page, it will be used in test cases)
   and add them in .env file as PAGE_ACCESS_TOKEN, RECIPIENT_ID.
 
 * Add callback URL from there(current url is https://obscure-plains-02948.herokuapp.com/api/webhook or if you deploy this application on their on server separately then append this url /api/webhook with your base URL) with verification_key. You can use any string as verification key when adding callback url but make sure to add this VERIFICATION_KEY in .env file of project.
